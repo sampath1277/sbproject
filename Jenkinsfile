@@ -6,7 +6,9 @@ pipeline {
     stages{
         stage('download'){
             steps {
-                git 'https://github.com/sampath1277/sbproject.git'
+                sshagent (credentials: ['git-ssh-privatekey']) {
+    sh "git clone -b ${env.BRANCH} http://gitlab.xxx.local/Front/function/xxx.git"
+}
             }
             
         }
