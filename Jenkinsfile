@@ -19,7 +19,7 @@ pipeline {
         {
             steps
             {
-               sh 'mvn package'
+               sh 'mvn install'
             }
         }
     }
