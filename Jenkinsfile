@@ -14,5 +14,13 @@ pipeline {
                 git 'https://github.com/sampath1277/sbproject.git'
             }
         }
+          
+        stage('build')
+        {
+            steps
+            {
+               sh 'mvn package'
+            }
+        }
     }
 }
