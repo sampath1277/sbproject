@@ -5,6 +5,14 @@ pipeline {
             steps{
                 echo 'Hi now we are preparing the flow'
             }
-        }   
+        }
+          
+        stage('git checkout')
+        {
+            steps
+            {
+                git 'https://github.com/sampath1277/sbproject.git'
+            }
+        }
     }
 }
