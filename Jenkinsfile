@@ -1,27 +1,10 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('start')
-        {
-            steps
-            {
-                sh 'echo "welcome to jenkins "'
-              
+      stages{
+        stage('Prepare the flow'){
+            steps{
+                echo 'Hi now we are preparing the flow'
             }
-        }
-         stage('download')
-        {
-            steps
-            {
-                git 'https://github.com/sampath1277/sbproject.git'
-            }
-        }
-        stage('build')
-        {
-            steps
-            {
-               sh 'mvn package'
-            }
-        }
-        
+        }   
     }
+}
