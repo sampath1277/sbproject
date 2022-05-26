@@ -1,5 +1,4 @@
-FROM openjdk:8
+FROM openjdk 
+COPY target/*.jar /
 EXPOSE 8090
-ADD \target\demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
-RUN mv demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","jar","\demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","jar","/my-app-1.0-SNAPSHOT.jar"]
